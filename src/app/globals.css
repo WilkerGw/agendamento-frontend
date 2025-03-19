@@ -1,0 +1,60 @@
+/* Reset de estilos modernos */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Melhorias na tipografia */
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeSpeed;
+}
+
+/* Removendo estilos padrão da lista */
+ul, ol {
+  list-style: none;
+}
+
+/* Garantindo que os links não tenham sublinhado padrão */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Melhorando botões e elementos interativos */
+button, input, textarea, select {
+  font: inherit;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+/* Corrigindo imagens para evitar distorções */
+img, picture, video, canvas, svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Definindo uma base responsiva para o body */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  text-size-adjust: none;
+}
+
+/* Melhorando acessibilidade no foco */
+button:focus-visible, a:focus-visible {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Melhorando a aparência de seleções de texto */
+::selection {
+  background: #007bff;
+  color: #fff;
+}
