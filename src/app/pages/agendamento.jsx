@@ -25,7 +25,7 @@ export default function Agendamento() {
 
     // Enviar os dados para a API
     const response = await fetch(
-      "https://my-nodejs-backend-12643wne0-wilkergws-projects.vercel.app/api/agendamento", // Rota corrigida
+      "https://agendamento-backend-xoup.onrender.com", // Rota corrigida
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
