@@ -25,7 +25,7 @@ export default function Agendamento() {
 
     // Enviar os dados para a API
     const response = await fetch(
-      "https://my-nodejs-backend-12643wne0-wilkergws-projects.vercel.app",
+      "https://my-nodejs-backend-12643wne0-wilkergws-projects.vercel.app/api/agendamento", // Rota corrigida
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -33,13 +33,14 @@ export default function Agendamento() {
       }
     );
 
-    const result = await response.json();
-
-    if (response.ok) {
-      setMensagem("Agendamento realizado com sucesso!");
-    } else {
+    if (!response.ok) {
+      const result = await response.json();
       setMensagem(`Erro: ${result.error}`);
+      return;
     }
+
+    const result = await response.json();
+    setMensagem("Agendamento realizado com sucesso!");
   };
 
   return (
