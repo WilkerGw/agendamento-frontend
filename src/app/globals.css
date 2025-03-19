@@ -58,3 +58,7 @@ button:focus-visible, a:focus-visible {
   background: #007bff;
   color: #fff;
 }
+
+.agendamento {
+  background-color: red;
+}
